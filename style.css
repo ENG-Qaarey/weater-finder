@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: #0059ffa5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  #dots-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .dot {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    animation: move 8s ease-in-out infinite, fade 4s ease-in-out infinite, scale 3s ease-in-out infinite;
+    will-change: transform, opacity;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    25% {
+      transform: translate(100px, 150px);
+    }
+    50% {
+      transform: translate(200px, -100px);
+    }
+    75% {
+      transform: translate(300px, 150px);
+    }
+    100% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes fade {
+    0%, 100% {
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.2;
+    }
+  }
+  
+  @keyframes scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.6);
+    }
+  }
+  
+  
+  
+  
+          * {
+              padding: 0;
+              margin: 0;
+          }
+          main {
+              text-align: center;
+              width: 300px;
+              height: max-content;
+              min-height: 300px;
+              background-color: #4c48482d;
+              border-radius: 30px;
+              color: #fff;
+              box-shadow: 0 30px 50px rgb(158, 157, 157);
+              padding: 30px;
+              box-sizing: border-box;
+          }
+          main form {
+              border: 1px solid rgb(255, 255, 255);
+              display: flex;
+              border-radius: 30px;
+              justify-content: space-between;
+          }
+          main form input,
+          main form button {
+              border: none;
+              color: #fff;
+              background-color: transparent;
+              outline: none;
+              padding: 10px;
+              box-sizing: border-box;
+          }
+          main form input::placeholder {
+              color: #ffffff;
+          }
+          main form i {
+              opacity: 0.7;
+          }
+          main .result {
+              padding-top: 20px;
+              text-align: center;
+          }
+          main .result .name {
+              font-weight: bold;
+              font-size: large;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+          }
+          main .temperature img {
+              width: 150px;
+              filter: drop-shadow(0 10px 50px #555);
+          }
+          main .temperature figcaption {
+              font-size: 3em;
+          }
+          main .description {
+              padding: 10px 0 30px;
+          }
+          main ul {
+              list-style: none;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              gap: 10px;
+          }
+          main li {
+              background-color: #f78a55;
+              color: #fff;
+              border-radius: 10px;
+              padding: 20px 10px;
+              background-image: linear-gradient(to bottom, transparent 50%, #0003 50%);
+              font-weight: bold;
+              font-size: small;
+          }
+          main ul li i {
+              font-size: 2em;
+              margin: 20px 0;
+              display: block !important;
+          }
+          main li:nth-child(2) {
+              background-color: #b56291;
+          }
+          main li:nth-child(3) {
+              background-color: #48567b;
+          }
+          main.error {
+              animation: errorEffect 0.3s linear 1;
+          }
+          @keyframes errorEffect {
+              0% {
+                  transform: translate(10px, 5px);
+              }
+              25% {
+                  transform: translate(-5px, 0);
+              }
+              50% {
+                  transform: translate(8px, 2px);
+              }
+              75% {
+                  transform: translate(-2px, 5px);
+              }
+              100% {
+                  transform: translate(0, 0);
+              }
+          }
+  
+          hr {
+              border: 0;
+              height: 2px;
+              background: linear-gradient(50deg, #ff6a00, #ee0979, #ff6a00);
+              border-radius: 5px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+              
+          }

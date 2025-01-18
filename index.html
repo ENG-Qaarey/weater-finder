@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dots-container"></div>
+    <main>
+        <strong>Weather Finder!for every country <br>
+            Or every region</strong>&nbsp;
+        <hr><br>
+
+        <form>
+            <input type="text" id="name" autocomplete="off" placeholder="Search for a city...">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <section class="result" style="display: none;">
+            <figure class="name">
+                <figcaption></figcaption>
+                <img src="">
+            </figure>
+            <figure class="temperature">
+                <img src="">
+                <figcaption>
+                    <span></span>
+                    <sup>o</sup>
+                </figcaption>
+            </figure>
+            <p class="description"></p>
+            <ul>
+                <li>
+                    <span>clouds</span>
+                    <i class="fa-solid fa-cloud"></i>
+                    <span id="clouds">0</span>%
+                </li>
+                <li>
+                    <span>humidity</span>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span id="humidity">0</span>%
+                </li>
+                <li>
+                    <span>pressure</span>
+                    <i class="fa-solid fa-gauge"></i>
+                    <span id="pressure">0</span>hPa
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
